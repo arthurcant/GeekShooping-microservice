@@ -31,7 +31,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddAuthentication("Bearer")
-.AddJwtBearer(options =>
+.AddJwtBearer("Bearer", options =>
 {
     options.Authority = "https://localhost:4435/";
     options.TokenValidationParameters = new TokenValidationParameters
